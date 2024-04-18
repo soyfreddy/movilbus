@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP1.MainPage"
+             BackgroundColor="#D9D9D9">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- AGREGAR IMAGEN -->
+        <Frame CornerRadius="100"  
+            WidthRequest="200"
+            HeightRequest="200"
+            HasShadow="False"            
+            Padding="0">            
+            <Image Source="logo_uno.png"
+           Aspect="AspectFill"/>
+        </Frame>
+
+        <StackLayout Grid.Row="1" Padding="20,20,20,0">
+            <Label Text="Inicio de sesion"
+                   FontSize="34"
+                   FontAttributes="Bold"
+                   TextColor="#6E5AFF"/>
+                    
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Padding="20,20,20,0" Orientation="Vertical" Spacing="10">
+            <Label Text="Gmail"
+           FontSize="20"
+           TextColor="Black"          
+           FontAttributes="Bold"
+           VerticalOptions="Start"
+           HorizontalOptions="FillAndExpand" />
+            <Entry x:Name="EmailEntryPaginaLogin" 
+           Placeholder="MovilBus17@gmail.com"           
+               FontSize="20" />
+
+            <Label Text="Contraseña"
+           FontSize="20"
+           TextColor="Black"
+           FontAttributes="Bold"
+           VerticalOptions="Start"
+           HorizontalOptions="FillAndExpand" />
+
+            <Entry x:Name="PasswordEntryPaginaLogin"
+           Placeholder="Escribe la contraseña"
+           IsPassword="true"
+           FontSize="20" />
+
+            <Label Text="¿Olvidaste tu contraseña?"
+                   FontSize="13"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+            <Button Text="Iniciar Sesion"
+                    TextColor="White"
+                    FontAttributes="Bold"                    
+                    FontSize="20"/>
+
+        </StackLayout> 
+        
+        <StackLayout Grid.Row="3" Padding="20,0,20,7">
+            <Button Text="Inicia sesión con Google" 
+                    Background="White"                    
+                    CornerRadius="10"
+                    BorderWidth="1"
+                    FontSize="20"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="4" Padding="20,0,20,17">
+            <Button Text="Inicia sesión con Facebook" 
+                    Background="White"
+                    FontSize=" 20"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
